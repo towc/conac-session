@@ -44,16 +44,23 @@ new Conac({
 });
 ```
 
-## param
+### param
 The `param` property is directly passed to express-session, after some undefined values are substituted with defaults.
 
-## field
+### field
 The `field` property determines under what name the `req.session` will be added to the accumulator. Default is `'session'`
 
-## initialize
+### initialize
 The `initialize` property sets additional initial values of the session, so you don't have to do it in the routes. This can be an object, or a function that returns an object, to avoid using the same references. Default is `{}`
-
+## notes
 Keep in mind that the defaults are NOT good for production.
+
+You should set `param.cookie.secure` to `true`, and select a `secret`.
+
+For now, the `secret` is pseudo-randomly generated every time the application starts, which means sessions won't persist between server restarts.
+
+There's a `param.trustProxy` that calls `app.set('trust proxy', 1)` if `true`, which is the default. You might want to set this to false
+
 
 # usage
 
