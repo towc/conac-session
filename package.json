@@ -1,0 +1,22 @@
+{
+  "name": "conac-session",
+  "version": "0.0.1",
+  "description": "session plugin for conac",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/towc/conac-session.git"
+  },
+  "author": "Matei Copot <matei@copot.eu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/towc/conac-session/issues"
+  },
+  "homepage": "https://github.com/towc/conac-session#readme",
+  "dependencies": {
+    "express-session": "^1.15.6"
+  }
+}
